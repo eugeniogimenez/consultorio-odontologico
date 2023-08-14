@@ -2,6 +2,21 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <body id="page-top">
 
+    <!-- VALIDACION DE SESION -->
+    <%
+
+        HttpSession miSession = request.getSession();
+
+        String usuario = (String) request.getSession().getAttribute("usuario");
+
+        if (usuario == null) {
+
+            response.sendRedirect("sinLogin.jsp");
+        }
+
+    %>
+    <!-- FIN VALIDACION DE SESION -->
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -9,7 +24,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.jsp">
                 <div class="sidebar-brand-icon rotate-n-15">
 
                     <i class="fas fa-regular fa-tooth"></i>
@@ -135,7 +150,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><%=request.getSession().getAttribute("usuario")%></span>
                                 <img class="img-profile rounded-circle"
                                      src="img/undraw_profile.svg">
                             </a>
@@ -172,7 +187,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800"></h1>
 
                     </div>
 
