@@ -61,7 +61,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="buttons.html">Ver odontólogos</a>
+                        <a class="collapse-item" href="SvOdontologo">Ver odontólogos</a>
                         <a class="collapse-item" href="altaOdontologo.jsp">Alta odontólogos</a>
                     </div>
                 </div>
@@ -79,14 +79,14 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Ver pacientes</a>
+                        <a class="collapse-item" href="SvPaciente">Ver pacientes</a>
                         <a class="collapse-item" href="utilities-border.html">Alta pacientes</a>
 
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- USUARIOS -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
                    aria-expanded="true" aria-controls="collapseUtilities">
@@ -104,6 +104,27 @@
                     </div>
                 </div>
             </li>
+            <!-- FIN USUARIOS -->
+
+            <!-- TURNOS -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTurnos"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+
+                    <i class="fas fa-hospital-user"></i>
+                    <span>Turnos</span>
+                </a>
+                <div id="collapseTurnos" class="collapse" aria-labelledby="headingUtilities"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="SvTurnos">Ver Turnos</a>
+                        <a class="collapse-item" href="altaTurnos.jsp">Alta Turnos</a>
+
+                    </div>
+                </div>
+            </li>
+            <!-- FIN TURNOS -->
 
             <!-- Divider -->
             <hr class="sidebar-divider">

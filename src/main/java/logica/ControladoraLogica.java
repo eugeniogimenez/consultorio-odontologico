@@ -1,6 +1,8 @@
 package logica;
 
+import java.util.Date;
 import java.util.ArrayList;
+
 import java.util.List;
 import persistencia.ControladoraPersistencia;
 
@@ -8,9 +10,11 @@ public class ControladoraLogica {
 
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
 
+    //USUARIO
     public void crearUsuario(String nombreUsuario, String contrasenia, String rol) {
 
         Usuario usu = new Usuario();
+
         usu.setNombre_usuario(nombreUsuario);
         usu.setPassword(contrasenia);
         usu.setRol(rol);
@@ -63,5 +67,107 @@ public class ControladoraLogica {
         }
         return ingreso;
     }
+    //FIN USUARIO
 
+    //PACIENTE
+    public void crearPaciente(String nombre, String apellido, boolean obraSocial, List<Turno> listaTurnos) {
+        Paciente paciente = new Paciente();
+
+        paciente.setNombre(nombre);
+        paciente.setApellido(apellido);
+        paciente.setTiene_OS(obraSocial);
+        paciente.setListaTurnos(listaTurnos);
+
+        controlPersis.crearPaciente(paciente);
+    }
+
+    public List<Paciente> getPacientes() {
+
+        return controlPersis.getPacientes();
+
+    }
+
+    public void borrarPaciente(int id) {
+
+        controlPersis.borrarPaciente(id);
+    }
+
+    public Paciente traerPaciente(int id) {
+
+        return controlPersis.traerPaciente(id);
+    }
+
+    public void editarPaciente(Paciente pacien) {
+
+        controlPersis.editarPaciente(pacien);
+    }
+    //FIN PACIENTE
+
+    //TURNO
+    public void crearTurno(Date fecha_turno, String hora_turno, String afeccion) {
+        Turno turno = new Turno();
+
+        turno.setFecha_turno(fecha_turno);
+        turno.setHora_turno(hora_turno);
+        turno.setAfeccion(afeccion);
+
+        controlPersis.crearTurno(turno);
+    }
+
+    public List<Turno> getTurnos() {
+
+        return controlPersis.getTurnos();
+
+    }
+
+    public void borrarTurno(int id) {
+
+        controlPersis.borrarTurno(id);
+    }
+
+    public Turno traerTurno(int id) {
+
+        return controlPersis.traerTurno(id);
+    }
+
+    public void editarTurno(Turno pacien) {
+
+        controlPersis.editarTurno(pacien);
+    }
+    //FIN TURNO
+
+    //ODONTOLOGO
+    public void crearOdontologo(String nombre, String apellido, List<Turno> listaTurnos, Usuario unUsuario) {
+        Odontologo odonto = new Odontologo();
+
+        odonto.setNombre(nombre);
+        odonto.setApellido(apellido);
+
+        odonto.setListaTurnos(listaTurnos);
+        odonto.setUnUsuario(unUsuario);
+
+        controlPersis.crearOdontologo(odonto);
+    }
+
+    public List<Odontologo> getOdontologos() {
+
+        return controlPersis.getOdontologos();
+
+    }
+
+    public void borrarOdontologo(int id) {
+
+        controlPersis.borrarOdontologo(id);
+    }
+
+    public Odontologo traerOdontologo(int id) {
+
+        return controlPersis.traerOdontologo(id);
+    }
+
+    public void editarOdontologo(Odontologo pacien) {
+
+        controlPersis.editarOdontologo(pacien);
+    }
+    //FIN ODONTOLOGO
 }

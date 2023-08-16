@@ -1,5 +1,7 @@
 logica\Usuario.class
+servlet\SvOdontologo.class
 logica\Persona.class
+servlet\SvLogin.class
 logica\exceptions\PreexistingEntityException.class
 logica\Turno.class
 persistencia\UsuarioJpaController.class
@@ -15,13 +17,17 @@ logica\Odontologo.class
 servlet\SvEditUsuarios.class
 logica\exceptions\NonexistentEntityException.class
 logica\ControladoraLogica.class
+logica\prueba.class
 persistencia\HorarioJpaController.class
 logica\Paciente.class
+servlet\SvPaciente.class
 logica\Horario.class
+servlet\SvTurnos.class
 logica\Secretario.class
 persistencia\PacienteJpaController.class
 persistencia\PersonaJpaController.class
 logica\Responsable.class
 persistencia\exceptions\NonexistentEntityException.class
 persistencia\TurnoJpaController.class
+logica\elim.class
 logica\exceptions\IllegalOrphanException.class

@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package persistencia;
 
 import java.io.Serializable;
@@ -12,6 +16,10 @@ import javax.persistence.criteria.Root;
 import logica.Turno;
 import persistencia.exceptions.NonexistentEntityException;
 
+/**
+ *
+ * @author elthu
+ */
 public class TurnoJpaController implements Serializable {
 
     public TurnoJpaController(EntityManagerFactory emf) {
@@ -21,13 +29,6 @@ public class TurnoJpaController implements Serializable {
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
-    }
-
-    //Creo esto para:
-    //cuando necesitemos usar el CRUD de este JPAController, crea una instancia
-    //en la EntityManagerFactory para poder hacer uso de esos elementos.
-    public TurnoJpaController() {
-        emf = Persistence.createEntityManagerFactory("ConsultorioOdontologico_PU");
     }
 
     public void create(Turno turno) {
@@ -42,6 +43,10 @@ public class TurnoJpaController implements Serializable {
                 em.close();
             }
         }
+    }
+
+    public TurnoJpaController() {
+        emf = Persistence.createEntityManagerFactory("ConsultorioOdontologico_PU");
     }
 
     public void edit(Turno turno) throws NonexistentEntityException, Exception {

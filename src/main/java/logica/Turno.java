@@ -74,4 +74,12 @@ public class Turno implements Serializable {
         this.afeccion = afeccion;
     }
 
+    //
+    /*public Odontologo getOdonto() {
+        return odonto;
+    }
+
+    public Paciente getPacient() {
+        return pacient;
+    }*/
 }
