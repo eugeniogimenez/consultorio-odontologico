@@ -2,6 +2,7 @@ logica\Usuario.class
 servlet\SvOdontologo.class
 logica\Persona.class
 servlet\SvLogin.class
+servlet\SvElimOdontologo.class
 logica\exceptions\PreexistingEntityException.class
 logica\Turno.class
 persistencia\UsuarioJpaController.class
@@ -22,6 +23,7 @@ persistencia\HorarioJpaController.class
 logica\Paciente.class
 servlet\SvPaciente.class
 logica\Horario.class
+servlet\SvEditarOdontologo.class
 servlet\SvTurnos.class
 logica\Secretario.class
 persistencia\PacienteJpaController.class

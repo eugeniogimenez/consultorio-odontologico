@@ -28,8 +28,6 @@
                             <th>id</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>Turnos</th>
-                            <th>Usuario</th>
                             <th style="width: 210px">Acción</th>
                         </tr>
                     </thead>
@@ -39,8 +37,6 @@
                             <th>id</th>
                             <th>Nombre</th>
                             <th>Apellido</th>
-                            <th>Turnos</th>
-                            <th>Usuario</th>
                             <th style="width: 210px">Acción</th>
                         </tr>
                     </tfoot>
@@ -56,19 +52,17 @@
                             <td><%=odonto.getId()%></td>
                             <td><%=odonto.getNombre()%></td>
                             <td><%=odonto.getApellido()%></td>
-                            <td><%=odonto.getListaTurnos()%></td>
-                            <td><%=odonto.getUnUsuario()%></td>
 
                             <td style="display:flex; width: 230px;">
 
-                                <form name="eliminar" action="SvElimOdontologos" method="POST"> <!-- Para mandar el codigo al Servlet -->
+                                <form name="eliminar" action="SvElimOdontologo" method="POST"> <!-- Para mandar el codigo al Servlet -->
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: red; margin-right: 5px;">
                                         <i class="fas fa-trash-alt"></i>Eliminar
                                     </button>
                                     <input type="hidden" name="id" value="<%=odonto.getId()%>"> <!-- Para mandar el codigo al Servlet -->
                                 </form>
 
-                                <form name="editar" action="SvEditOdontologos" method="GET"> <!-- Para mandar el codigo al Servlet -->
+                                <form name="editar" action="SvEditarOdontologo" method="GET"> <!-- Para mandar el codigo al Servlet -->
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left:5px;">
                                         <i class="fas fa-pen-alt"></i>Editar
                                     </button>

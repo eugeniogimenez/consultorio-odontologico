@@ -137,14 +137,11 @@ public class ControladoraLogica {
     //FIN TURNO
 
     //ODONTOLOGO
-    public void crearOdontologo(String nombre, String apellido, List<Turno> listaTurnos, Usuario unUsuario) {
+    public void crearOdontologo(String nombre, String apellido) {
         Odontologo odonto = new Odontologo();
 
         odonto.setNombre(nombre);
         odonto.setApellido(apellido);
-
-        odonto.setListaTurnos(listaTurnos);
-        odonto.setUnUsuario(unUsuario);
 
         controlPersis.crearOdontologo(odonto);
     }

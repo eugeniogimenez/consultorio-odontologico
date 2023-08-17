@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.ControladoraLogica;
 import logica.Odontologo;
-import logica.Turno;
-import logica.Usuario;
 
 @WebServlet(name = "SvOdontologo", urlPatterns = {"/SvOdontologo"})
 public class SvOdontologo extends HttpServlet {
@@ -36,7 +34,10 @@ public class SvOdontologo extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("listaOdontologos", listaOdontologos);
 
-        System.out.println("Odontologo: " + listaOdontologos.get(0));
+        if (!listaOdontologos.isEmpty()) {
+            // Manejo de caso cuando la lista está vacía
+            System.out.println("Odontologo: " + listaOdontologos.get(0));
+        }
 
         response.sendRedirect("verOdontologos.jsp");
 
@@ -47,15 +48,11 @@ public class SvOdontologo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String nombre = request.getParameter("nombre_usuario");
-        String password = request.getParameter("password");
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
 
-        List<Turno> turno = controlLogica.getTurnos();
-
-        int usuarioId = Integer.parseInt(request.getParameter("usuario"));
-        Usuario usuario = controlLogica.traerUsuario(usuarioId);
-
-        controlLogica.crearOdontologo(nombre, password, turno, usuario);
+        // Crea el Odontólogo y vincula el Usuario existente
+        controlLogica.crearOdontologo(nombre, apellido);
 
         response.sendRedirect("verOdontologos.jsp");
     }

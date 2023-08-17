@@ -75,11 +75,11 @@ public class Turno implements Serializable {
     }
 
     //
-    /*public Odontologo getOdonto() {
+    public Odontologo getOdonto() {
         return odonto;
     }
 
     public Paciente getPacient() {
         return pacient;
-    }*/
+    }
 }
