@@ -1,6 +1,7 @@
 package logica;
 
 import java.io.Serializable;
+import java.time.LocalTime;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,7 @@ public class Turno implements Serializable {
 
     @Temporal(TemporalType.DATE)
     private Date fecha_turno;
-    private String hora_turno;
+    private LocalTime hora_turno;
     private String afeccion;
 
     //RELACION
@@ -35,7 +36,7 @@ public class Turno implements Serializable {
     public Turno() {
     }
 
-    public Turno(int id_turno, Date fecha_turno, String hora_turno, String afeccion) {
+    public Turno(int id_turno, Date fecha_turno, LocalTime hora_turno, String afeccion) {
         this.id_turno = id_turno;
         this.fecha_turno = fecha_turno;
         this.hora_turno = hora_turno;
@@ -58,11 +59,11 @@ public class Turno implements Serializable {
         this.fecha_turno = fecha_turno;
     }
 
-    public String getHora_turno() {
+    public LocalTime getHora_turno() {
         return hora_turno;
     }
 
-    public void setHora_turno(String hora_turno) {
+    public void setHora_turno(LocalTime hora_turno) {
         this.hora_turno = hora_turno;
     }
 

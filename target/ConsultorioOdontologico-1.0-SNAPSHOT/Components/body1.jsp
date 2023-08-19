@@ -68,7 +68,7 @@
             </li>
             <!--FIN ODONTOLOG -->
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!--PACIENTE -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                    aria-expanded="true" aria-controls="collapseUtilities">
@@ -81,11 +81,12 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
                         <a class="collapse-item" href="SvPaciente">Ver pacientes</a>
-                        <a class="collapse-item" href="utilities-border.html">Alta pacientes</a>
+                        <a class="collapse-item" href="altaPaciente.jsp">Alta pacientes</a>
 
                     </div>
                 </div>
             </li>
+            <!--FIN PACIENTE -->
 
             <!-- USUARIOS -->
             <li class="nav-item">
@@ -109,7 +110,7 @@
 
             <!-- TURNOS -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTurnos"
+                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseTurnos"
                    aria-expanded="true" aria-controls="collapseUtilities">
 
                     <i class="fas fa-hospital-user"></i>
@@ -120,7 +121,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
                         <a class="collapse-item" href="SvTurnos">Ver Turnos</a>
-                        <a class="collapse-item" href="altaTurnos.jsp">Alta Turnos</a>
+                        <a class="collapse-item" href="altaTurno.jsp">Alta Turnos</a>
 
                     </div>
                 </div>

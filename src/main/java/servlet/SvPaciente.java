@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.ControladoraLogica;
 import logica.Paciente;
-import logica.Turno;
 
 @WebServlet(name = "SvPaciente", urlPatterns = {"/SvPaciente"})
 public class SvPaciente extends HttpServlet {
@@ -56,9 +55,7 @@ public class SvPaciente extends HttpServlet {
         String obraSocialStr = request.getParameter("obraSocial");
         boolean obraSocial = Boolean.parseBoolean(obraSocialStr);
 
-        // Obtener la lista de turnos del paciente
-        //List<Turno> listaTurnos = controlLogica.getListaDeTurnos();
-        // controlLogica.crearPaciente(nombre, apellido, obraSocial, listaTurnos);
+        controlLogica.crearPaciente(nombre, apellido, obraSocial);
         response.sendRedirect("verPacientes.jsp");
     }
 

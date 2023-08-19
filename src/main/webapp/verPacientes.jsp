@@ -29,7 +29,6 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Obra Social</th>
-                            <th>Lista de Turnos</th>
                             <th style="width: 210px">Acción</th>
                         </tr>
                     </thead>
@@ -40,7 +39,6 @@
                             <th>Nombre</th>
                             <th>Apellido</th>
                             <th>Obra Social</th>
-                            <th>Lista de Turnos</th>
                             <th style="width: 210px">Acción</th>
                         </tr>
                     </tfoot>
@@ -57,18 +55,17 @@
                             <td><%=pacient.getNombre()%></td>
                             <td><%=pacient.getApellido()%></td>
                             <td><%=pacient.isTiene_OS()%></td>
-                            <td><%=pacient.getListaTurnos()%></td>
 
                             <td style="display:flex; width: 230px;">
 
-                                <form name="eliminar" action="SvElimPacientes" method="POST"> <!-- Para mandar el codigo al Servlet -->
+                                <form name="eliminar" action="SvElimPaciente" method="POST"> <!-- Para mandar el codigo al Servlet -->
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: red; margin-right: 5px;">
                                         <i class="fas fa-trash-alt"></i>Eliminar
                                     </button>
                                     <input type="hidden" name="id" value="<%=pacient.getId()%>"> <!-- Para mandar el codigo al Servlet -->
                                 </form>
 
-                                <form name="editar" action="SvEditPacientes" method="GET"> <!-- Para mandar el codigo al Servlet -->
+                                <form name="editar" action="SvEditPaciente" method="GET"> <!-- Para mandar el codigo al Servlet -->
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left:5px;">
                                         <i class="fas fa-pen-alt"></i>Editar
                                     </button>

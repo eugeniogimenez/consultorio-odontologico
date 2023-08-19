@@ -9,8 +9,5 @@ package logica;
  * @author elthu
  */
 public class elim {
-//Creo esto para:
-    //cuando necesitemos usar el CRUD de este JPAController, crea una instancia
-    //en la EntityManagerFactory para poder hacer uso de esos elementos.
 
 }

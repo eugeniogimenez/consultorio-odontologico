@@ -1,5 +1,6 @@
 package logica;
 
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.ArrayList;
 
@@ -70,13 +71,12 @@ public class ControladoraLogica {
     //FIN USUARIO
 
     //PACIENTE
-    public void crearPaciente(String nombre, String apellido, boolean obraSocial, List<Turno> listaTurnos) {
+    public void crearPaciente(String nombre, String apellido, boolean obraSocial) {
         Paciente paciente = new Paciente();
 
         paciente.setNombre(nombre);
         paciente.setApellido(apellido);
         paciente.setTiene_OS(obraSocial);
-        paciente.setListaTurnos(listaTurnos);
 
         controlPersis.crearPaciente(paciente);
     }
@@ -104,7 +104,7 @@ public class ControladoraLogica {
     //FIN PACIENTE
 
     //TURNO
-    public void crearTurno(Date fecha_turno, String hora_turno, String afeccion) {
+    public void crearTurno(Date fecha_turno, LocalTime hora_turno, String afeccion) {
         Turno turno = new Turno();
 
         turno.setFecha_turno(fecha_turno);
@@ -167,4 +167,5 @@ public class ControladoraLogica {
         controlPersis.editarOdontologo(pacien);
     }
     //FIN ODONTOLOGO
+
 }

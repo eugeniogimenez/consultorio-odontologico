@@ -1,8 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +8,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import logica.ControladoraLogica;
-import logica.Odontologo;
+import logica.Paciente;
 
-@WebServlet(name = "SvOdontologo", urlPatterns = {"/SvOdontologo"})
-public class SvOdontologo extends HttpServlet {
+@WebServlet(name = "SvEditPaciente", urlPatterns = {"/SvEditPaciente"})
+public class SvEditPaciente extends HttpServlet {
 
     ControladoraLogica controlLogica = new ControladoraLogica();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
     }
 
     //GET
@@ -27,19 +24,14 @@ public class SvOdontologo extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        List<Odontologo> listaOdontologos = new ArrayList<Odontologo>();
-
-        listaOdontologos = controlLogica.getOdontologos();
+        int id = Integer.parseInt(request.getParameter("id"));
+        Paciente pacient = controlLogica.traerPaciente(id);
 
         HttpSession miSession = request.getSession();
-        miSession.setAttribute("listaOdontologos", listaOdontologos);
+        miSession.setAttribute("pacientEditar", pacient);
 
-        if (!listaOdontologos.isEmpty()) {
-            // Manejo de caso cuando la lista está vacía
-            System.out.println("Odontologo: " + listaOdontologos.get(0));
-        }
-
-        response.sendRedirect("verOdontologos.jsp");
+        System.out.println("El paciente es: " + pacient.getNombre());
+        response.sendRedirect("editarPaciente.jsp");
 
     }
 
@@ -51,10 +43,17 @@ public class SvOdontologo extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
 
-        // Crea el Odontólogo y vincula el Usuario existente
-        controlLogica.crearOdontologo(nombre, apellido);
+        String obraSocialStr = request.getParameter("obraSocial");
+        boolean obraSocial = Boolean.parseBoolean(obraSocialStr);
 
-        response.sendRedirect("SvOdontologo");
+        Paciente pacient = (Paciente) request.getSession().getAttribute("pacientEditar");
+        pacient.setNombre(nombre);
+        pacient.setApellido(apellido);
+        pacient.setTiene_OS(obraSocial);
+
+        controlLogica.editarPaciente(pacient);
+
+        response.sendRedirect("SvPaciente");
     }
 
     @Override

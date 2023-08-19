@@ -64,14 +64,14 @@
 
                             <td style="display:flex; width: 230px;">
 
-                                <form name="eliminar" action="SvElimTurnos" method="POST"> <!-- Para mandar el codigo al Servlet -->
+                                <form name="eliminar" action="SvElimTurno" method="POST"> <!-- Para mandar el codigo al Servlet -->
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="background-color: red; margin-right: 5px;">
                                         <i class="fas fa-trash-alt"></i>Eliminar
                                     </button>
                                     <input type="hidden" name="id" value="<%=turno.getId_turno()%>"> <!-- Para mandar el codigo al Servlet -->
                                 </form>
 
-                                <form name="editar" action="SvEditTurnos" method="GET"> <!-- Para mandar el codigo al Servlet -->
+                                <form name="editar" action="SvEditTurno" method="GET"> <!-- Para mandar el codigo al Servlet -->
                                     <button type="submit" class="btn btn-primary btn-user btn-block" style="margin-left:5px;">
                                         <i class="fas fa-pen-alt"></i>Editar
                                     </button>

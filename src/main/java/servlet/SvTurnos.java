@@ -3,7 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
@@ -57,16 +57,7 @@ public class SvTurnos extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String hora = request.getParameter("hora_turno");
-        String afeccion = request.getParameter("afeccion");
-
-        int odontoId = Integer.parseInt(request.getParameter("odontologo"));
-        int pacienteId = Integer.parseInt(request.getParameter("paciente"));
-
-        Odontologo odonto = controlLogica.traerOdontologo(odontoId);
-        Paciente pacient = controlLogica.traerPaciente(pacienteId);
-
-        //Tratamiento del typo Date
+        //Fecha
         String fechaStr = request.getParameter("fecha_turno");
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
@@ -77,9 +68,24 @@ public class SvTurnos extends HttpServlet {
             Logger.getLogger(SvTurnos.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        //Hora
+        String horaStr = request.getParameter("hora");
+        LocalTime hora = LocalTime.parse(horaStr, DateTimeFormatter.ofPattern("HH:mm"));
+
+        //Afeccion
+        String afeccion = request.getParameter("afeccion");
+
+        //Odontologo
+        int odontoId = Integer.parseInt(request.getParameter("odontologo"));
+        Odontologo odonto = controlLogica.traerOdontologo(odontoId);
+
+        //Paciente
+        int pacienteId = Integer.parseInt(request.getParameter("paciente"));
+        Paciente pacient = controlLogica.traerPaciente(pacienteId);
+
         controlLogica.crearTurno(fecha, hora, afeccion);
 
-        response.sendRedirect("verTurnos.jsp");
+        response.sendRedirect("SvTurnos");
     }
 
     @Override
