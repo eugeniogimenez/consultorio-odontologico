@@ -13,10 +13,10 @@
         <class>logica.Usuario</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/clinica_odonto?serverTimezone=UTC"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://bzhnw6nyiywvpwfcjffb-mysql.services.clever-cloud.com:3306/bzhnw6nyiywvpwfcjffb?serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.user" value="upukgt1rcj5cklof"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.password" value="IErciTrKMydAjPCjt0LW"/>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
         </properties>
     </persistence-unit>

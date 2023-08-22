@@ -29,10 +29,10 @@ servlet\SvEditarOdontologo.class
 servlet\SvTurnos.class
 servlet\SvEditTurno.class
 logica\Secretario.class
+servlet\SvElimTurno.class
 persistencia\PacienteJpaController.class
 persistencia\PersonaJpaController.class
 logica\Responsable.class
 persistencia\exceptions\NonexistentEntityException.class
 persistencia\TurnoJpaController.class
-logica\elim.class
 logica\exceptions\IllegalOrphanException.class

@@ -30,7 +30,6 @@ public class SvEditUsuarios extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("usuEditar", usu);
 
-        System.out.println("El usuario es: " + usu.getNombre_usuario());
         response.sendRedirect("editarUsuarios.jsp");
 
     }

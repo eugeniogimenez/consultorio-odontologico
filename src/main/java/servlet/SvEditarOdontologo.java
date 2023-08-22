@@ -31,7 +31,6 @@ public class SvEditarOdontologo extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("odontoEditar", odonto);
 
-        System.out.println("El Odontólogo es: " + odonto.getNombre());
         response.sendRedirect("editarOdontologo.jsp");
 
     }

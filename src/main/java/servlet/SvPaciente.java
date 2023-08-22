@@ -36,18 +36,8 @@ public class SvPaciente extends HttpServlet {
 
         if (listaPacientes.isEmpty()) {
             System.out.println("SvPaciente doGET La lista de pacientes está vacía.");
-        } else {
-            System.out.println("SvPaciente doGET Lista de pacientes:");
-            for (Paciente paciente : listaPacientes) {
-                System.out.println("ID: " + paciente.getId()
-                        + ", Nombre: " + paciente.getNombre()
-                        + ", Apellido: " + paciente.getApellido()
-                        + ", Os: " + paciente.isTiene_OS());
-            }
         }
 
-        //String pacientesJson = new Gson().toJson(listaPacientes);
-        //response.getWriter().write(pacientesJson);
         response.sendRedirect("verPacientes.jsp");
     }
 

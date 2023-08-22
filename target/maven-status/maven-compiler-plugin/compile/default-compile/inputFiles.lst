@@ -6,6 +6,7 @@ C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\pers
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\ResponsableJpaController.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\Turno.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\OdontologoJpaController.java
+C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvElimTurno.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvEditarOdontologo.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\Secretario.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\exceptions\PreexistingEntityException.java
@@ -29,7 +30,6 @@ C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\serv
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvLogin.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvUsuarios.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvTurnos.java
-C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\elim.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\ControladoraPersistencia.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\exceptions\PreexistingEntityException.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\exceptions\NonexistentEntityException.java

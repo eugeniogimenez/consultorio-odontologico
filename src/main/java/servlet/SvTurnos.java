@@ -43,18 +43,9 @@ public class SvTurnos extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("listaTurnos", listaTurnos);
 
-        System.out.println("SvTurnos doGET Lista de turnos:" + listaTurnos);
-
         if (listaTurnos.isEmpty()) {
             // Manejo de caso cuando la lista está vacía
             System.out.println("La lista de turnos está vacía.");
-        } else {
-            System.out.println("SvTurnos doGET Lista de turnos:");
-            for (Turno turno : listaTurnos) {
-                System.out.println("ID: " + turno.getId_turno()
-                        + ", odonto: " + turno.getOdonto().getNombre()
-                        + ", paciente: " + turno.getPacient().getNombre());
-            }
         }
 
         response.sendRedirect("verTurnos.jsp");
@@ -87,18 +78,11 @@ public class SvTurnos extends HttpServlet {
         //Odontologo
         int odontoId = Integer.parseInt(request.getParameter("odontologo"));
         Odontologo odonto = controlLogica.traerOdontologo(odontoId);
-        System.out.println("SvTurno doPost odontoId: " + odontoId);
-        System.out.println("SvTurno doPost odonto: " + odonto);
 
         //Paciente
-        String pacienteParam = request.getParameter("paciente");
-        System.out.println("SvTurno doPost Valor del parámetro 'paciente': " + pacienteParam);
-
         int pacienteId = Integer.parseInt(request.getParameter("paciente"));
         Paciente pacient = controlLogica.traerPaciente(pacienteId);
-
-        System.out.println("SvTurno doPost odonto.getNombre: " + odonto.getNombre());
-        System.out.println("SvTurno doPost paciente.getNombre: " + pacient.getNombre());
+        ;
         controlLogica.crearTurno(fecha, hora, afeccion, odonto, pacient);
 
         response.sendRedirect("SvTurnos");

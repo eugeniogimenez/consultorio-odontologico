@@ -37,7 +37,6 @@ public class SvEditTurno extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("turnoEditar", turno);
 
-        System.out.println("El turno es: " + turno.getId_turno());
         response.sendRedirect("editarTurno.jsp");
 
     }
@@ -68,13 +67,8 @@ public class SvEditTurno extends HttpServlet {
         //Odontologo
         int odontoId = Integer.parseInt(request.getParameter("odontologo"));
         Odontologo odonto = controlLogica.traerOdontologo(odontoId);
-        System.out.println("SvTurno doPost odontoId: " + odontoId);
-        System.out.println("SvTurno doPost odonto: " + odonto);
 
         //Paciente
-        String pacienteParam = request.getParameter("paciente");
-        System.out.println("SvTurno doPost Valor del parámetro 'paciente': " + pacienteParam);
-
         int pacienteId = Integer.parseInt(request.getParameter("paciente"));
         Paciente pacient = controlLogica.traerPaciente(pacienteId);
 

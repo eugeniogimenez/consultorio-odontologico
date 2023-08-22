@@ -30,7 +30,6 @@ public class SvEditPaciente extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("pacientEditar", pacient);
 
-        System.out.println("El paciente es: " + pacient.getNombre());
         response.sendRedirect("editarPaciente.jsp");
 
     }
