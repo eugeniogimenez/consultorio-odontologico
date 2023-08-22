@@ -2,7 +2,6 @@ package servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,10 +35,19 @@ public class SvPaciente extends HttpServlet {
         miSession.setAttribute("listaPacientes", listaPacientes);
 
         if (listaPacientes.isEmpty()) {
-            // Manejo de caso cuando la lista está vacía
-            System.out.println("La lista de pacientes está vacía.");
+            System.out.println("SvPaciente doGET La lista de pacientes está vacía.");
+        } else {
+            System.out.println("SvPaciente doGET Lista de pacientes:");
+            for (Paciente paciente : listaPacientes) {
+                System.out.println("ID: " + paciente.getId()
+                        + ", Nombre: " + paciente.getNombre()
+                        + ", Apellido: " + paciente.getApellido()
+                        + ", Os: " + paciente.isTiene_OS());
+            }
         }
 
+        //String pacientesJson = new Gson().toJson(listaPacientes);
+        //response.getWriter().write(pacientesJson);
         response.sendRedirect("verPacientes.jsp");
     }
 
@@ -53,10 +61,12 @@ public class SvPaciente extends HttpServlet {
 
         // Obtener el valor del parámetro de obra social
         String obraSocialStr = request.getParameter("obraSocial");
-        boolean obraSocial = Boolean.parseBoolean(obraSocialStr);
+        boolean obraSocial = obraSocialStr != "";
+        //boolean obraSocial = Boolean.parseBoolean(obraSocialStr);
+        //boolean obraSocial = "true".equals(obraSocialStr); // Convertir a booleano
 
         controlLogica.crearPaciente(nombre, apellido, obraSocial);
-        response.sendRedirect("verPacientes.jsp");
+        response.sendRedirect("SvPaciente");
     }
 
     @Override

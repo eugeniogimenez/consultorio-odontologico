@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -36,6 +35,7 @@ public class SvTurnos extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        //Turno
         List<Turno> listaTurnos = new ArrayList<Turno>();
 
         listaTurnos = controlLogica.getTurnos();
@@ -43,9 +43,18 @@ public class SvTurnos extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("listaTurnos", listaTurnos);
 
+        System.out.println("SvTurnos doGET Lista de turnos:" + listaTurnos);
+
         if (listaTurnos.isEmpty()) {
             // Manejo de caso cuando la lista está vacía
             System.out.println("La lista de turnos está vacía.");
+        } else {
+            System.out.println("SvTurnos doGET Lista de turnos:");
+            for (Turno turno : listaTurnos) {
+                System.out.println("ID: " + turno.getId_turno()
+                        + ", odonto: " + turno.getOdonto().getNombre()
+                        + ", paciente: " + turno.getPacient().getNombre());
+            }
         }
 
         response.sendRedirect("verTurnos.jsp");
@@ -58,7 +67,7 @@ public class SvTurnos extends HttpServlet {
             throws ServletException, IOException {
 
         //Fecha
-        String fechaStr = request.getParameter("fecha_turno");
+        String fechaStr = request.getParameter("fecha");
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         Date fecha = null;
@@ -70,7 +79,7 @@ public class SvTurnos extends HttpServlet {
 
         //Hora
         String horaStr = request.getParameter("hora");
-        LocalTime hora = LocalTime.parse(horaStr, DateTimeFormatter.ofPattern("HH:mm"));
+        LocalTime hora = LocalTime.parse(horaStr);
 
         //Afeccion
         String afeccion = request.getParameter("afeccion");
@@ -78,12 +87,19 @@ public class SvTurnos extends HttpServlet {
         //Odontologo
         int odontoId = Integer.parseInt(request.getParameter("odontologo"));
         Odontologo odonto = controlLogica.traerOdontologo(odontoId);
+        System.out.println("SvTurno doPost odontoId: " + odontoId);
+        System.out.println("SvTurno doPost odonto: " + odonto);
 
         //Paciente
+        String pacienteParam = request.getParameter("paciente");
+        System.out.println("SvTurno doPost Valor del parámetro 'paciente': " + pacienteParam);
+
         int pacienteId = Integer.parseInt(request.getParameter("paciente"));
         Paciente pacient = controlLogica.traerPaciente(pacienteId);
 
-        controlLogica.crearTurno(fecha, hora, afeccion);
+        System.out.println("SvTurno doPost odonto.getNombre: " + odonto.getNombre());
+        System.out.println("SvTurno doPost paciente.getNombre: " + pacient.getNombre());
+        controlLogica.crearTurno(fecha, hora, afeccion, odonto, pacient);
 
         response.sendRedirect("SvTurnos");
     }

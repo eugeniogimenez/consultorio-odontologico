@@ -44,7 +44,8 @@ public class SvEditPaciente extends HttpServlet {
         String apellido = request.getParameter("apellido");
 
         String obraSocialStr = request.getParameter("obraSocial");
-        boolean obraSocial = Boolean.parseBoolean(obraSocialStr);
+        boolean obraSocial = obraSocialStr != "";
+        //boolean obraSocial = Boolean.parseBoolean(obraSocialStr);
 
         Paciente pacient = (Paciente) request.getSession().getAttribute("pacientEditar");
         pacient.setNombre(nombre);

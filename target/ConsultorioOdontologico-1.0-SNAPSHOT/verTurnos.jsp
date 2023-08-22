@@ -7,6 +7,7 @@
 <%@ include file="Components/body1.jsp"%>
 
 
+
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -46,6 +47,11 @@
                             <th style="width: 210px">Acción</th>
                         </tr>
                     </tfoot>
+                    <%    // Llamar a los servlets para obtener las listas de odontólogos y pacientes
+                        request.getRequestDispatcher("SvOdontologo").include(request, response);
+                        request.getRequestDispatcher("SvPaciente").include(request, response);
+                        request.getRequestDispatcher("SvTurnos").include(request, response);
+                    %>
 
                     <%                        List<Turno> listaTurnos = (List) request.getSession().getAttribute("listaTurnos");
                     %>
@@ -54,13 +60,15 @@
                         <%
                             for (Turno turno : listaTurnos) {
                         %>
+
+
                         <tr>
                             <td><%=turno.getId_turno()%></td>
                             <td><%=turno.getFecha_turno()%></td>
                             <td><%=turno.getHora_turno()%></td>
                             <td><%=turno.getAfeccion()%></td>
-                            <td><%=turno.getOdonto()%></td>
-                            <td><%=turno.getPacient()%></td>
+                            <td><%= turno.getOdonto().getNombre()%></td>
+                            <td><%= turno.getPacient().getNombre()%></td>
 
                             <td style="display:flex; width: 230px;">
 

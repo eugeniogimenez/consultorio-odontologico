@@ -104,12 +104,14 @@ public class ControladoraLogica {
     //FIN PACIENTE
 
     //TURNO
-    public void crearTurno(Date fecha_turno, LocalTime hora_turno, String afeccion) {
+    public void crearTurno(Date fecha_turno, LocalTime hora_turno, String afeccion, Odontologo odonto, Paciente pacient) {
         Turno turno = new Turno();
 
         turno.setFecha_turno(fecha_turno);
         turno.setHora_turno(hora_turno);
         turno.setAfeccion(afeccion);
+        turno.setOdonto(odonto);
+        turno.setPacient(pacient);
 
         controlPersis.crearTurno(turno);
     }
@@ -130,9 +132,9 @@ public class ControladoraLogica {
         return controlPersis.traerTurno(id);
     }
 
-    public void editarTurno(Turno pacien) {
+    public void editarTurno(Turno turno) {
 
-        controlPersis.editarTurno(pacien);
+        controlPersis.editarTurno(turno);
     }
     //FIN TURNO
 

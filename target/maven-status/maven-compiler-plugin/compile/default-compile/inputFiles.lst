@@ -1,3 +1,4 @@
+C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvEditPaciente.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvElimUsuarios.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\exceptions\IllegalOrphanException.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvOdontologo.java
@@ -9,12 +10,14 @@ C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\serv
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\Secretario.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\exceptions\PreexistingEntityException.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\exceptions\NonexistentEntityException.java
+C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvEditTurno.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvPaciente.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\Odontologo.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\Responsable.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\PersonaJpaController.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvElimOdontologo.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\TurnoJpaController.java
+C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\servlet\SvElimPaciente.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\logica\Horario.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\SecretarioJpaController.java
 C:\Users\elthu\src\JAVA\JAVA proyects\ConsultorioOdontologico\src\main\java\persistencia\HorarioJpaController.java

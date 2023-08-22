@@ -34,11 +34,19 @@ public class SvOdontologo extends HttpServlet {
         HttpSession miSession = request.getSession();
         miSession.setAttribute("listaOdontologos", listaOdontologos);
 
-        if (!listaOdontologos.isEmpty()) {
-            // Manejo de caso cuando la lista está vacía
-            System.out.println("Odontologo: " + listaOdontologos.get(0));
+        if (listaOdontologos.isEmpty()) {
+            System.out.println("SvOdontologo doGET La lista de odontos está vacía.");
+        } else {
+            System.out.println("SvOdontologo doGET Lista de odontos:");
+            for (Odontologo odonto : listaOdontologos) {
+                System.out.println("ID: " + odonto.getId()
+                        + ", Nombre: " + odonto.getNombre()
+                        + ", Apellido: " + odonto.getApellido());
+            }
         }
 
+        //String odontologosJson = new Gson().toJson(listaOdontologos);
+        //response.getWriter().write(odontologosJson);
         response.sendRedirect("verOdontologos.jsp");
 
     }
