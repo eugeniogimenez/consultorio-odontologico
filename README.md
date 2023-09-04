@@ -12,8 +12,8 @@ La dirección de la app es: https://consultorio-odontologico.onrender.com
 
 El usuario de prueba es: 
 
-Usuario: Admin
-Login: 1234
+##### Usuario: Admin
+##### Login: 1234
 
  IMPORTANTE: al usarse un servidor de pruebas (Clever Cloud) se debe tener paciencia en cuanto a la carga de información ya que puede tener demoras.
 
