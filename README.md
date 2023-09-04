@@ -3,9 +3,17 @@
 ## Descripcion General:
 El proyecto consiste en un sistema para la administración de un Consultorio Odontológico. Está pensado principalmente para ser manejado por un secretario administrativo y los distintos odontólogos.
 
- Permite básicamente la carga de pacientes, con sus respectivos datos, tratamientos, y  asignaciones de turnos.
+ Permite básicamente la carga de pacientes, con sus respectivos datos, tratamientos, y  asignaciones de turnos. 
+ 
+ Posee un sistema de login para seguridad.
 
- La dirección de la app es: https://consultorio-odontologico.onrender.com
+## Uso:
+La dirección de la app es: https://consultorio-odontologico.onrender.com
+
+El usuario de prueba es: 
+
+Usuario: Admin
+Login: 1234
 
  IMPORTANTE: al usarse un servidor de pruebas (Clever Cloud) se debe tener paciencia en cuanto a la carga de información ya que puede tener demoras.
 
