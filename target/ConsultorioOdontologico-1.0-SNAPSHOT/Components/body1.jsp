@@ -24,7 +24,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.jsp">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index.jsp">
                 <div class="sidebar-brand-icon rotate-n-15">
 
                     <i class="fas fa-regular fa-tooth"></i>
@@ -37,7 +37,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.jsp">
+                <a class="nav-link" href="/index.jsp">
                     <i class="fas fa-solid fa-bars"></i>
                     <span>Menú</span></a>
             </li>
@@ -61,8 +61,8 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="SvOdontologo">Ver odontólogos</a>
-                        <a class="collapse-item" href="altaOdontologo.jsp">Alta odontólogos</a>
+                        <a class="collapse-item" href="/SvOdontologo">Ver odontólogos</a>
+                        <a class="collapse-item" href="/altaOdontologo.jsp">Alta odontólogos</a>
                     </div>
                 </div>
             </li>
@@ -80,8 +80,8 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="SvPaciente">Ver pacientes</a>
-                        <a class="collapse-item" href="altaPaciente.jsp">Alta pacientes</a>
+                        <a class="collapse-item" href="/SvPaciente">Ver pacientes</a>
+                        <a class="collapse-item" href="/altaPaciente.jsp">Alta pacientes</a>
 
                     </div>
                 </div>
@@ -100,8 +100,8 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="SvUsuarios">Ver usuarios</a>
-                        <a class="collapse-item" href="altaUsuarios.jsp">Alta usuarios</a>
+                        <a class="collapse-item" href="/SvUsuarios">Ver usuarios</a>
+                        <a class="collapse-item" href="/altaUsuarios.jsp">Alta usuarios</a>
 
                     </div>
                 </div>
@@ -120,8 +120,8 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Acciones:</h6>
-                        <a class="collapse-item" href="SvTurnos">Ver Turnos</a>
-                        <a class="collapse-item" href="altaTurno.jsp">Alta Turnos</a>
+                        <a class="collapse-item" href="/SvTurnos">Ver Turnos</a>
+                        <a class="collapse-item" href="/altaTurno.jsp">Alta Turnos</a>
 
                     </div>
                 </div>
