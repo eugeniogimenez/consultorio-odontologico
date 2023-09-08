@@ -1,16 +1,16 @@
-# CONSULTORIO ODONTOLÓGICO  
+# CONSULTORIO ODONTOLÓGICO
 
 ## Descripcion General:
 El proyecto consiste en un sistema para la administración de un Consultorio Odontológico. Está pensado principalmente para ser manejado por un secretario administrativo y los distintos odontólogos.
 
- Permite básicamente la carga de pacientes, con sus respectivos datos, tratamientos, y  asignaciones de turnos. 
- 
+ Permite básicamente la carga de pacientes, con sus respectivos datos, tratamientos, y  asignaciones de turnos.
+
  Posee un sistema de login para seguridad.
 
 ## Uso:
-La dirección de la app es: https://consultorio-odontologico.onrender.com
+La dirección de la app es: https://consultorio-odontologico.onrender.com/ConsultorioOdontologico-1.0-SNAPSHOT/login.jsp
 
-El usuario de prueba es: 
+El usuario de prueba es:
 
 ##### Usuario: Admin
 ##### Login: 1234
@@ -28,13 +28,13 @@ El back se construye en base a Servlets para las distinas funciones.  Las tecnol
 - ##### Docker
 - ##### MySQL
 - ##### JPA (EclipseLink)
-- ##### JSP 
+- ##### JSP
 
 ## Arquitectura:
 Se sigue el modelo MVC para trabajar por capas, principalmente las de Logica y Persistencia.
 
 ## Base de Datos:
-Utilización de MySQL mediante el servicio de Clever Cloud. 
+Utilización de MySQL mediante el servicio de Clever Cloud.
 
 ## Docker:
 La app se dockerizó para su posterior despliegue.
