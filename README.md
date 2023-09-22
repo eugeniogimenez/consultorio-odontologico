@@ -1,4 +1,4 @@
-# CONSULTORIO ODONTOLÓGICO
+# CONSULTORIO ODONTOLÓGICO <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="50" height="50"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="50" height="50"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>
 
 ## Descripcion General:
 El proyecto consiste en un sistema para la administración de un Consultorio Odontológico. Está pensado principalmente para ser manejado por un secretario administrativo y los distintos odontólogos.
@@ -18,25 +18,26 @@ El usuario de prueba es:
  IMPORTANTE: al usarse un servidor de pruebas (Clever Cloud) se debe tener paciencia en cuanto a la carga de información ya que puede tener demoras.
 
 ## Front:
-Se utiliza como base una plantilla confeccionada en Boostrap, la cuál se le da una estructura de componentes para las distintas páginas. Se utiliza JSP.
+Se utiliza como base una plantilla confeccionada en Boostrap <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="30" height="30"/> </a>, la cuál se le da una estructura de componentes para las distintas páginas. Se utiliza JSP.
 
 ## Back:
 El back se construye en base a Servlets para las distinas funciones.  Las tecnologías usadas principalmente son:
 
-- ##### JAVA
+- ##### JAVA <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="30" height="30"/> </a>
 - ##### Servlets
-- ##### Docker
-- ##### MySQL
+- ##### Docker <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="30" height="30"/> </a>
+- ##### MySQL <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="30" height="30"/> </a>
 - ##### JPA (EclipseLink)
 - ##### JSP
+- ##### Boostrap <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="30" height="30"/> </a>
 
 ## Arquitectura:
 Se sigue el modelo MVC para trabajar por capas, principalmente las de Logica y Persistencia.
 
 ## Base de Datos:
-Utilización de MySQL mediante el servicio de Clever Cloud.
+Utilización de MySQL <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="30" height="30"/> </a> mediante el servicio de Clever Cloud.
 
-## Docker:
+## Docker <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a>:
 La app se dockerizó para su posterior despliegue.
 
 ## Diagrama UML:
